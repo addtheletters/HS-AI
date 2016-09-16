@@ -78,8 +78,10 @@ def f_old(val):
 
 from math import e
 
-from math import exp
+# def f(val):
+#     return 1/(1+pow(e, -val))
 
+# extracted from Home version
 def f(dp):
     return round( 1/(1+exp( -dp)) )
 
@@ -90,7 +92,7 @@ def ANN( warr, x1, x2 ):
   xarr = [-1, x1, x2]
   return act(f(dotprod( xarr, warr )))
   
-  
+print("Code on Github, please respect the honor code.")
 xarrays = [[-1, 1, 1, 1],
          [-1, 1, 0, 1],
          [-1, 0, 1, 1],

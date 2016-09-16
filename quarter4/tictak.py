@@ -347,10 +347,6 @@ def main():
     else:
       print('unrecognized')
       #playTrainingGame(dataBase)
-      
-  
-  
-
 
 bo = '-'
 c1 = 'X'

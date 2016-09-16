@@ -130,7 +130,7 @@ def runGeneration_topToBottom_Multi( critters ):
     count       = 0
     currPA      = 0
     currPlus    = 1
-    children = []
+    children = [] # Code written by Ben Zhang, class of 2015. Please respect the honor code.
     while count < len(critters):
         #print(critters)
         chlds = mate_multi(critters[currPA], critters[currPA+currPlus])
@@ -166,6 +166,7 @@ def ga3_eval(xval, yval):
   return (xval*sin(4*xval) + 1.1*yval*sin(2*yval))
 
 #print(fitnessFunc("1010101010"))
+print("Code made available on Github. Please respect the honor code.")
 
 print("--GA1-------------------------------------")
 
@@ -209,7 +210,7 @@ for i in range(8):
    print( "gen", i,
           "\t:", sum([ga3_fitnessFunc(gene) for gene in currgen]) / len(currgen))
          # "\t:", currgen )
-
+# Code written by Ben Zhang, class of 2015. Please respect the honor code.
 currgen = sortOnFitnessFunc(currgen, ga3_fitnessFunc)
 print(  "best is\t\t\t", currgen[0], "\nwith value of\t\t", ga3_xyvals(currgen[0]),
         "\nwith function value of\t", ga3_fitnessFunc(currgen[0]) * (-1))
@@ -217,7 +218,4 @@ print(  "best is\t\t\t", currgen[0], "\nwith value of\t\t", ga3_xyvals(currgen[0
 #print(ga3_eval(9.039, 8.668))
 
 #---------------
-
-
-
 

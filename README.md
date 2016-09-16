@@ -35,7 +35,7 @@ Code is divided by the quarter of the school year in which it was written.
 - Simple neural networks of various sorts, touching on
     - [Feed forward](https://en.wikipedia.org/wiki/Feedforward_neural_network) in ann4.py, feedfowrard.py
     - [Back propagation](https://en.wikipedia.org/wiki/Backpropagation) in ann5.py
-- Setup for some simple [genetic algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) generation simulation in genetic1.py
+- Setup for some simple [genetic algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) generation simulation in genetic2.py
 
 ## Permutations unit
 One unit was focused around permutations; these files have been split off in a separate folder.
