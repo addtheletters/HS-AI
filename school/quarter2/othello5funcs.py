@@ -1,3 +1,5 @@
+# This file contains miscellaneous functions excerpted from the Othello program.
+
 def computersMove(depth, player):
     depth = depth-1
     global M
@@ -132,7 +134,7 @@ def baseCaseForEvenPlyDepth(depth, player):
     # pick the highest one
     # go up
     
-    # Hi Ellis when you eventually read this message I just wanted to say hi what up
+    # Hi Ellis when you eventually read this message I just wanted to say hi what up 
     
     
     

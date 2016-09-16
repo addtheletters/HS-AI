@@ -6,7 +6,7 @@ from time import clock
 from trie import Node
 from random import randint
 
-FILE = "ghostdict.java"
+FILE = "ghostdict.java" # Why is it a .java file????
 
 def main():
   root = getWords(FILE)
@@ -28,6 +28,7 @@ def main():
   #print(word)
 
 def printDirections():
+  print("This code was written by Ben Zhang, TJHSST class of 2015. No cheating, please!")
   print("Welcome to GHOST!")
   print("Take a card, any card")
   print("and of course, enjoy your stay!")
@@ -50,11 +51,11 @@ def isComputer(player):
 
 def requestAndCheck(player, root, stng):
   if not isComputer(player):
-    stng += input(player + ', enter character! ').lower()[0]
-    print('Player has chosen. Word is now:', stng, '.', sep = '')
-    if root.search(stng) == True:
-      print("----------------------------------------------")
-      print(player, "loses because (s)he is bad. Also,", stng, "is a word.")
+    stng += input(player + ', enter character! ').lower()[0]      # code provided
+    print('Player has chosen. Word is now:', stng, '.', sep = '') # open source on
+    if root.search(stng) == True:                                 # github; should not be submitted
+      print("----------------------------------------------")     # as your own work.
+      print(player, "loses because (s)he is bad. Also,", stng, "is a word.") # :)
       print("---The game is over. Awwwwwwwwwwwwwwwwwww. ---")
       exit()
     if root.fragmentInDictionary(stng) == False:

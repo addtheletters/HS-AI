@@ -42,7 +42,6 @@ def minDotProd4(x, y):
   zipped = list(zip(a, b))
   return sum( [ aval*bval for aval, bval in zipped ]  )
   
-  
 def main():
   x = [3, 4, 5]
   y = [5, 6, 7]

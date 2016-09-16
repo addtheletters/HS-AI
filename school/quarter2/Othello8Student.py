@@ -1,3 +1,5 @@
+# Othello project. 
+
 """     +==========================+========-========*========-========+==========================+
         ||                APPLYING THE MINIMAX ALGORITHM TO THE GAME OF OTHELLO                  ||
         ||                        by M. Stueben (Revised: January 5, 2014)                       ||
@@ -536,12 +538,6 @@ def printMatrices(): # <-- This function prints the matrices M , PW, and PB to t
     print ('     0  1  2  3  4  5  6  7')
     print ('  +--------------------------+')
 
-
-
-
-
-
-
     for r in range(8):
       print (r, '|', end = '')
       for c in range (8):
@@ -602,13 +598,6 @@ def LocateTurnedPieces(r, c, player): # The pieces turned over are of -player's 
             if M[r+n][c] == player: break
             flipped += ((r+n,c,),)
     totalFlipped += flipped
-
-
-
-
-
-
-
 
  #--case 3 (move up)
     flipped = []
@@ -742,8 +731,6 @@ def illegalClick(x, y): # Click is not on board or click is on an already-filled
     if M[r][c] != 0:
         print("ERROR 3: Cell is occupied at r =", r, " c =", c)
         return True      # = cell is occupied
-
-
 
 
  #--Not next to cell of opposite color
@@ -947,9 +934,6 @@ def click(evt): # A legal move is guaranteed to exist.
     if legalMove(HUMAN) and not legalMove(COMPUTER): return
 
 
-
-
-
  #--Make computer reply/replies (1 = BLACK = human, -1 = computer = WHITE)
     if legalMove(COMPUTER):
         startTime = clock()
@@ -1047,7 +1031,7 @@ def maxValue(depth, player, alpha, beta): # Return the MAXIMUM value of the boar
     
     for r in range(8):
       for c in range(8):
-        if M[r][c] != 0:
+        if M[r][c] != 0: # code was writtn' by Ben Z, TJ class of 2015; please do not submit as your own.
           continue
         piecesTurnedOver = LocateTurnedPieces(r, c, player)
         if not piecesTurnedOver:
@@ -1088,11 +1072,10 @@ def minValue(depth, player, alpha, beta):
     if depth == 0:
       return baseCaseForOddPlyDepth(depth, player)
     
-
     global M
     assert player == COMPUTER # = white
     setOfMoveValuesAndMoves = []        # 3. WRITE THIS FUNCTION
-    
+    # This code was written by Ben Zhang, TJHSST class of 2015. No cheating, please!
     for r in range(8):
       for c in range(8):
         if M[r][c] != 0:
@@ -1101,13 +1084,12 @@ def minValue(depth, player, alpha, beta):
         if not piecesTurnedOver:
           continue
         
-        
         makeTheMoveAndTurnOverThePieces(r, c, piecesTurnedOver, player)
         
         childval = maxValue(depth, -player, alpha, beta)
         
         setOfMoveValuesAndMoves.append(childval)
-        takeBackTheMoveAndTurnBackOverThePieces(r, c, piecesTurnedOver, player)
+        takeBackTheMoveAndTurnBackOverThePieces(r, c, piecesTurnedOver, player) # my goodness this function name is long
         
         if childval < beta:
           beta = childval
@@ -1136,9 +1118,9 @@ def baseCaseForEvenPlyDepth(depth, player):
     assert depth == 0, [depth]
     updateThePointMatrices()
     setOfMoveValuesAndMoves = []        # 2. WRITE THIS FUNCTION
-    
-    for r in range(8):
-      for c in range(8):
+    # code provided open source on Github
+    for r in range(8): # do not steal please
+      for c in range(8): # do not submit as your own
         if M[r][c] != 0:
           continue
         piecesTurnedOver = LocateTurnedPieces(r, c, player)
@@ -1185,7 +1167,7 @@ def baseCaseForOddPlyDepth(depth, player):
         makeTheMoveAndTurnOverThePieces(r, c, piecesTurnedOver, player)
         setOfMoveValuesAndMoves.append(boardScore(-player))
         takeBackTheMoveAndTurnBackOverThePieces(r, c, piecesTurnedOver, player)
-    
+    # This code was written by Ben Zhang, TJHSST class of 2015. No cheating, please!
     if setOfMoveValuesAndMoves == []:
       return boardScore(-player)
       

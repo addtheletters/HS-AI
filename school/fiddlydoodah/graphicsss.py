@@ -1,3 +1,5 @@
+# I'll be honest: I have no idea what I was doing with this file
+
 from functools import *
 from itertools import *
 from tkinter import *

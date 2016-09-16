@@ -32,7 +32,7 @@ class Node(object):
       (self.children[char]).display()
       
   def insert(self, stng):
-    if len(stng) == 0:
+    if len(stng) == 0: # code from github, please do not submit as own work
       self.children['$'] = Node('$')
     else:
       if (stng[0] not in self.children):
@@ -57,7 +57,7 @@ class Node(object):
   def fragmentInDictionary(self, stng):
     if len(stng) == 0:
       return True
-    #print(stng)
+    #print(stng) # code from github, please do not submit as own work
     for key in self.children:
       if key == stng[0]:
         #print(key + ' is ' + stng[0])
@@ -92,6 +92,5 @@ def main():
 
 def printElapsedTime():
   print('\n---Total run time =', round(clock() - startTime, 2), 'seconds.')
-  
   
 if __name__ == '__main__': startTime = clock(); main()

@@ -2,6 +2,7 @@
 #Period 2
 
 def computersMove(depth, player):
+    print("This code was written by Ben Zhang, TJHSST class of 2015. No cheating, please!")
     depth = depth-1
     global M
     setOfMoveValuesAndMoves = []        # 1. WRITE THIS FUNCTION
@@ -12,7 +13,7 @@ def computersMove(depth, player):
           continue
         piecesTurnedOver = LocateTurnedPieces(r, c, player)
         if piecesTurnedOver == 0:
-          continue
+          continue # please no turn in this is on github is cheating thanks
         makeTheMoveAndTurnOverThePieces(r, c, piecesTurnedOver, player)
         setOfMoveValuesAndMoves.append((maxValue(depth, -player), r, c, piecesTurnedOver))
         takeBackTheMoveAndTurnBackOverThePieces(r, c, piecesTurnedOver, player)

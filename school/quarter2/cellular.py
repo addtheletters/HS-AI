@@ -14,7 +14,6 @@ def setUpCanvas(root):
   canvas.pack(expand = YES, fill = BOTH)
   return canvas
 
-
 def printList(rule):
   
   canvas.create_text(170, 20, text = 'Rule ' + str(rule), \
@@ -27,7 +26,7 @@ def printList(rule):
   printstart = 650
   L = [0,0] + L + [0,0]
 
-  for gen in range(GENERATIONS):
+  for gen in range(GENERATIONS): # This code was written by Ben Zhang, TJHSST class of 2015. No cheating, please!
     for digit in L:
       if digit == 1:
         canvas.create_text(printPos[0], printPos[1], text = CHAR, fill = 'RED', font = ('Helvetica', FONT_SIZE, 'bold'))
@@ -50,6 +49,7 @@ canvas = setUpCanvas(root)
 CHAR = chr(9607)
 
 def main():
+  print("This code was written by Ben Zhang, TJHSST class of 2015. No cheating, please!")
   rule = [0, 0, 0, 1, 1, 1, 1, 0,]
   
   printList(rule)

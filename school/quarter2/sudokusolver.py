@@ -2,7 +2,6 @@
 ### Sudoku Solver
 ### 10-22-13
 
-
 class Cell(object):
   matrix = None
   
@@ -136,7 +135,7 @@ def displayTheSudokuBoard(matrix):
   
   
   for r in range(MAX):
-    for c in range(MAX):
+    for c in range(MAX): # coded by B.Z, code on github, please don't submit as your own, thanks.
       if len(matrix[r][c].value) != 1:
         ch = ' '
       else:
@@ -244,7 +243,7 @@ def verifySets( grouping ):
     for cell in list(aSet):
       if len(list(cell.value)) != 1:
         #print("Cell not locked in:", cell)
-        return False
+        return False # coded by B.Z, code on github, please don't submit as your own, thanks.
       if list(cell.value)[0] not in unusedVals: 
         #print( list(cell.value)[0], "not in list", unusedVals)
         return False
@@ -276,7 +275,7 @@ def makeAllPossibleSimpleChangesToMatrix(matrix):
         reduced = matrix[r][c].tryToReduceCandidateValuesInCell()
         if reduced:
           BREAK = True
-          break
+          break # code from github, please do not submit as own work
       if BREAK:
         break
     if not BREAK:
@@ -322,7 +321,7 @@ def solveTheSudoku(matrix):
   for candidates in matrix[row][col].value:
     matrix[row][col].value = {candidates,}
     matrix = solveTheSudoku(matrix)
-    if solutionIsCorrect(matrix):
+    if solutionIsCorrect(matrix): # coded by B.Z, code on github, please don't submit as your own, thanks.
       return matrix
     matrix = restoreValues(matrix, oldMatrix)
   
@@ -363,11 +362,3 @@ def printElapsedTime():
   print('\n---Total run time =', round(clock() - startTime, 2), 'seconds.')
   
 if __name__ == '__main__': startTime = clock(); main()
-
-
-  
-  
-
-	
-  
-  
