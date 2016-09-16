@@ -6,7 +6,7 @@ from time import clock
 from trie import Node
 from random import randint
 
-FILE = "ghostdict.java" # Why is it a .java file????
+FILE = "quarter2/ghostdict.txt"
 
 def main():
   root = getWords(FILE)
