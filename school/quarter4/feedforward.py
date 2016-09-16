@@ -109,7 +109,7 @@ class NeuralNetwork():
 
     def backPropagate(self):
         #print('Trying...')
-        
+        # Code written by Ben Zhang, class of 2015. Please respect the honor code.
         from copy import deepcopy
         
         matrixW = deepcopy(self.matrix2)
@@ -164,7 +164,7 @@ maxEpochsForTraining = 1
 
 def main():
     print('Back propagate test!')
-  
+    print('Code written by Ben Zhang, class of 2015. Please respect the honor code.')
     x = NeuralNetwork(inputVector = [1, 0, 1],
                       numOfHiddenNodes1 = 2,
                       targetVector = [1, 0, 1],
@@ -183,5 +183,3 @@ def main():
 if __name__ == '__main__':
     from time import clock; START_TIME = clock(); main();
     print('runtime', round(clock() - START_TIME, 2), 'seconds')
-
-

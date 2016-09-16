@@ -9,7 +9,7 @@ from random import randint
 from time import clock
 
 def main():
-  
+
     # Constants
     population = 5000
     possibledays = 36500
@@ -17,7 +17,7 @@ def main():
     # For a population size and a number of possible birthdays to choose from,
     # we will attempt to determine how many people and what percentage of people
     # will have unique birthdays.
-        
+    # This assignment was completed in 2015. Please follow the honor code.
     uniquedaycount = population # Starting off, we assume every birthday is unique.
                                 # For every generated birthday that isn't unique, we will
                                 # decrease this count.
@@ -55,6 +55,7 @@ def main():
     
   
 if __name__ == '__main__':
+  print("Code written by Ben Zhang, TJ class of 2015. Please respect the honor code.")
   START_TIME = clock(); main()
   print( "\n --> Runtime was", round(clock() - START_TIME, 2), "seconds. <--" )
   

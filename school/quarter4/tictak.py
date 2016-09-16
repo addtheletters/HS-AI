@@ -2,9 +2,6 @@
 #       Ben Zhang       
 #       Period 2
 
-#     
-
-
 
 def blankBoard():
   return bo * 9
@@ -138,7 +135,7 @@ def playTrainingGame( dataBase ):
   if hasWon(currentBoard, c1):
     print("Player of character", c1, "won!")
     amendDatabaseProbabilities(dataBase, WIN)
-    return
+    return # Code written by Ben Zhang, class of 2015. Please respect the honor code.
   if hasWon(currentBoard, c2):
     print("Player of character", c2, "(the computer, kindof) won!")
     amendDatabaseProbabilities(dataBase, LOSS)
@@ -208,6 +205,7 @@ def amendDatabaseProbabilities( dataBase, state ):
     
 
 def main():
+  print("Code written by Ben Zhang, class of 2015. Please respect the honor code.")
   dataBase = fillDatabase(generateBoardPermutations())
   
   for x in range(1000):
@@ -221,8 +219,6 @@ def main():
       exit()
     else:
       playHumanGame(dataBase)
-      
-   
   
   playTrainingGame(dataBase)
   
@@ -238,4 +234,3 @@ playerChars[0] = c1
 playerChars[1] = c2
 
 if __name__ == '__main__': main();
-

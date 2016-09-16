@@ -17,8 +17,6 @@ def calculateError(
   face = 2
   sadface = sad + face
   print( sadface )
-  
-  
   return 0
   
 from random import random
@@ -45,5 +43,5 @@ def matrixMult( V, M ):
       W[wIndex] = sum( [ (V[ind] * M[ind][wIndex]) for ind in range(len(M)) ] )
     return W
   
-  
-calculateError([1, 0, 1])
+print("Code made available on Github. Please respect the honor code.")
+print(calculateError([1, 0, 1]))

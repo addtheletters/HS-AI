@@ -8,7 +8,7 @@ def printBoard( board ):
   print( '#' * (size*2 + 3) )
   for loc in board:
     if loc >= size:
-      error[0] = True
+      error[0] = True # written by Ben Zhang, class of 2015. Please do not submit as your own.
       error[1] = loc
       error[2] = board.index(loc)
     linestr = "# "
@@ -35,13 +35,13 @@ def findFewestAttacks( perms, original ):
   return best
 
 def hillclimb(board, depthlim = 10):
-  oldbest = board
+  oldbest = board 
   fewest = countAttacks(board)
-  depth = 0
+  depth = 0 
   while True:
     depth += 1
     if depth > depthlim:
-      break
+      break # Code provided through Github. Please do not submit as your own.
     bestest = findFewestAttacks(get1PSwaps(oldbest), oldbest)
     attacks = countAttacks(bestest)
     if bestest == oldbest:
@@ -53,7 +53,7 @@ def hillclimb(board, depthlim = 10):
 
 def findSolution( N, maxtries = 30 ):
   bestmin = float('inf')
-  tries = 0
+  tries = 0 # Code provided through Github. Please do not submit as your own.
   solution = []
   while bestmin > 0:
     tries += 1
@@ -104,7 +104,7 @@ def swap( leest, index1, index2 ):
   
 def get1PSwaps( original ):
   size = len(original)
-  perms = []
+  perms = [] # Code provided through Github. Please do not submit as your own.
   perms.append( original[:])
   for ind1 in range(size):
     for ind2 in range(ind1+1, size):
@@ -125,12 +125,10 @@ def print1PSwaps( original ):
 from time import clock
 import sys, random
 #board = getIntBoard(sys.argv[1:])
+print("Code written by Ben Zhang, TJ class of 2015. Please respect the honor code.")
 starttime = clock()
 board = findSolution(40, 30)
 printBoard( board )
 print( "Attacks:", countAttacks( board ))
 #print1PSwaps(board)
 print( "Time spent is", round(clock()-starttime, 2), 'seconds.' )
-
-
-

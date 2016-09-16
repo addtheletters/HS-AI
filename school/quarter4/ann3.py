@@ -10,7 +10,7 @@ def train_ann( xarrs, alpha = 0.01, warr = [], acceptableError = 0.01, maxIterat
   BOGUS = float('inf')
   
   minErrors = [BOGUS] * len(xarrs)
-  
+  # Code written by Ben Zhang, class of 2015. Please respect the honor code.
   if warr == []:
     warr = [3] * (len(xarrs[0]) - 1)
   
@@ -93,7 +93,7 @@ xarrays = [[-1, 1, 1, 0, 0],
          [-1, 0, 1,   0, 1],
          [-1, 0, 0,   1, 0],]
 
-
+print("Code made available on Github. Please respect the honor code.")
 weights = train_ann( xarrays, 0.01, getRand(4)   )
 
 print( ANN(weights, 1, 1, 0) )

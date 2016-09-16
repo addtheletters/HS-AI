@@ -141,9 +141,12 @@ def ga3_fitnessFunc(item):
   yval = int(item[10:], 2)
   return xval * sin(4 * xval) + 1.1 * yval * sin(2 * yval)
 
-
-
-#print(fitnessFunc("1010101010"))
+print("Code made available on Github. Please respect the honor code.")
+print(fitnessFunc("1010101010"))
+print(fitnessFunc("0000011111"))
+print(fitnessFunc("1111100000"))
+print(fitnessFunc("1111111111"))
+print(fitnessFunc("0000000000"))
 
 #--------------GA1
 """

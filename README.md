@@ -33,5 +33,11 @@ Quarter 3 was focused on machine vision and image manipulation.
 - Experimenting with circular permutations in permutequiz.py
 - Monte-Carlo experiment on unique birthdays in uniquebirthdays.py
 
-
-
+## Quarter 4 Highlights
+Quarter 4 was focused on neural networks, genetic algorithms, and miscellaneous interesting problems.
+- [Hillclimbing](https://en.wikipedia.org/wiki/Hill_climbing) to solve the [N-Queens problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) in nqueens.py
+- Self-teaching / dynamically learning Tic-Tac-Toe AI in tictak.py
+- Simple neural networks of various sorts, touching on
+    - [Feed forward](https://en.wikipedia.org/wiki/Feedforward_neural_network) in ann4.py, feedfowrard.py
+    - [Back propagation](https://en.wikipedia.org/wiki/Backpropagation) in ann5.py
+- Setup for some simple [genetic algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) generation simulation in genetic1.py

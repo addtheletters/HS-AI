@@ -5,6 +5,7 @@
 from math import atan2, pi
 
 def theta( Gx, Gy ):
+  print("Code written by Ben Zhang, TJ class of 2015. Please respect the honor code.")
   def closestInt( radians ):
     diffs = [   abs(radians),
                 abs(radians - (pi / 4)),

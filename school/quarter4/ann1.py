@@ -45,5 +45,4 @@ print( ANN( w0, w1, 2, 6 ) )
 print( ANN( w0, w1, 1000, 3000 ) )
 print( ANN( w0, w1, 40000, 120000) )
 print( ANN( w0, w1, 40000, 120000 + 1) )
-  
 
