@@ -51,6 +51,7 @@ graph = {'A':[366,3,('Z',75),('T',118),('S',140)],
 
 
 def main():
+  print("This code was written by Ben Zhang, TJHSST class of 2015. No cheating, please!")
   print(astar('A', 'B'))  
   
 def astar(rootNode, goalNode):
@@ -58,7 +59,6 @@ def astar(rootNode, goalNode):
   CLOSED = {}
   
   while Q:
-    
     (fValue, node, path, gValue) = Q.pop(0)
     
     if node == goalNode:
@@ -68,7 +68,7 @@ def astar(rootNode, goalNode):
     
     for (child, localDist) in graph[node][2:]:
       nodeTuple = (graph[child][0]+localDist, child, path + [node], localDist)
-      if child in CLOSED:
+      if child in CLOSED: #This code was written by Ben Zhang, class of 2015. No cheating, please!
         if CLOSED[child] > localDist:
           del CLOSED[node]
           Q.append(nodeTuple) ##???
@@ -86,11 +86,6 @@ def astar(rootNode, goalNode):
           if toople[3] > localDist:
             Q.remove(foundToople)
             Q.append(nodeTuple)
-
-    
-    
-    
-
 
 if __name__ == '__main__': main()
   

@@ -33,7 +33,7 @@ def DFS_AnyPath(node, goalNode, path = [], closedSet = set()):
     return path
   
   for (child, dist) in graph[node]:
-    
+    # This code was written by Ben Zhang, TJHSST class of 2015. No cheating, please!
     if child not in closedSet:
       temppath = []
       temppath = DFS_AnyPath(child, goalNode, path, closedSet)
@@ -65,7 +65,7 @@ def DFS_LeastCost(node, goalNode, path = [], best = [], bestcost = 0):
   path = path + [node]
   if node == goalNode:
     return path, bestcost
-  
+  # This code was written by Ben Zhang, TJHSST class of 2015. No cheating, please!
   for (child, dist) in graph[node]:
     temppath = []
     if (child not in path):
@@ -82,21 +82,20 @@ def DFS_LeastCost(node, goalNode, path = [], best = [], bestcost = 0):
 
 def BFS_AnyPath(start, goalNode):
   Q = [start]
+  path = []
   ##return BFS_AnyPathRecurse(Q, goal)
   closedSet = set()
   while len(Q) > 0:
     node = Q.pop(0)
+    path.append(node)
     closedSet.add(node)
     if(node == goalNode):
       return path
     for(child, dist) in graph[node]:
       if child not in closedSet:
         Q.append(child)
-        
-    
 
 def BFS_AnyPathRecurse(Q, goalNode, path = [], closedSet = set()):
-  
   node = Q.pop(0)
   path = path + [node]
   closedSet.add(node)
@@ -107,20 +106,10 @@ def BFS_AnyPathRecurse(Q, goalNode, path = [], closedSet = set()):
   for(child, dist) in graph[node]:
     if(child == goalNode):
       return path + [child]
-    
     if child not in closedSet:
       Q.append(child)
     
-  
   return BFS_AnyPathRecurse(Q, goalNode, path, closedSet)
-
-def BFS_LeastCost():
-  
-  
-  return
-
-
-
 
 def main():
   print("===DFS===")

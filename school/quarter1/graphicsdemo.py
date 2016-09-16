@@ -43,7 +43,7 @@ def runExampleGraphicsCode():
   
   obj7 = canvas.create_polygon(300, 300, 400, 400, 300, 400, fill = 'green', outline = 'black', width = 5, tag = 'Tag1')
   
-  photo = PhotoImage(file = 'random.gif')
+  photo = PhotoImage(file = 'school/quarter1/random.gif')
   
   print(" w = ", photo.width(), " c = ", photo.height())
   
