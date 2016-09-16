@@ -5,7 +5,6 @@
 
 #       I have neither given nor received any help in writing this program.
 
-
 from random import randint
 from time import clock
 
@@ -67,5 +66,3 @@ if __name__ == '__main__':
 #       [ pop. size = 5000 ; possible b-days = 36500 ]
 #       
 #        --> Runtime was 0.48 seconds. <--
-
-

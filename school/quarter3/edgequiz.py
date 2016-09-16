@@ -59,6 +59,3 @@ for index in range(ROW * COL):
       newImage[index] += image[item[0]] * item[1]
 
 printImage(newImage)
-    
-
-

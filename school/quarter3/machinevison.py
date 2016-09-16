@@ -106,7 +106,7 @@ def getGaussianMaskIndicesAndScalars( index ):
   indices.append( [getIndex(coords[0] + 1    , coords[1] + 1), 1] )
   indices.append( [getIndex(coords[0] - 1    , coords[1] + 1), 1] )
   indices.append( [getIndex(coords[0] + 1    , coords[1] - 1), 1] )
-  return indices
+  return indices # Code on github. Respect honor code. Do not submit as your own. 
 
 def getXSobelMaskIndicesAndScalars( index ):
   coords = getCoords(index)
@@ -136,7 +136,7 @@ def getYSobelMaskIndicesAndScalars( index ):
 
 def getCannyStructureCellsForAngle( index, approxAngle ):
   coords = getCoords(index)
-  indices = []
+  indices = [] # Code on github. Respect honor code. Do not submit as your own. 
   if approxAngle == 0:
     indices.append( getIndex(coords[0]        , coords[1] - 1) )
     indices.append( getIndex(coords[0]        , coords[1] + 1) )
@@ -177,7 +177,7 @@ def gaussianSmooth( image ):
         #if part[0] < 0:
         #print(image[part[0]], part[1])
         total += part[1] * image[part[0]]
-        #print(total)
+        #print(total) # Code on github. Respect honor code. Do not submit as your own. 
       product[index] = total / 16
   return product
 
@@ -199,13 +199,13 @@ def theta( Gx, Gy ):
     if ind == 4: 
       ind = 0
     return ind 
-    
+  # Code on github. Respect honor code. Do not submit as your own. 
   T = atan2( Gy, Gx ) % pi
   return closestInt(T)
 
 def sobelTransform( image ):
   product = [ [0, 0, 0, 0, 0] for elt in range(WIDTH * HEIGHT) ]
-  for index in range(WIDTH * HEIGHT):
+  for index in range(WIDTH * HEIGHT): # Code on github. Respect honor code. Do not submit as your own. 
     if not isBorderPixel(index):
       xMaskParts = getXSobelMaskIndicesAndScalars( index )
       yMaskParts = getYSobelMaskIndicesAndScalars( index )
@@ -230,7 +230,7 @@ def findStructEdges( sobel ):
     if not isBorderPixel(index):
       structChecks = getCannyStructureCellsForAngle( index, sobel[index][1] )
       if sobel[index][0] > sobel[structChecks[0]][0]\
-         and sobel[index][0] > sobel[structChecks[0]][0]:
+         and sobel[index][0] > sobel[structChecks[0]][0]: # Code on github. Respect honor code. Do not submit as your own. 
         sobel[index][2] = 1
   return sobel
 
@@ -246,7 +246,7 @@ def doubleThreshold( sobel ):
 
 def fixCellAt(M, index):
   if isBorderPixel(index):
-    return
+    return # Code on github. Respect honor code. Do not submit as your own. 
   if M[index][3] == 1:
     return
   M[index][3] = 1
@@ -275,6 +275,7 @@ HIGH = 50
 COLORFLAG = False
 
 def main():
+  print("Coded by Ben Zhang, TJHSST class of 2015. Please do not submit as your own.")
   #print('Starting!')
   imageFileName = 'lena.ppm'
   nums = list(readPixelColorsFromImageFile(imageFileName))
@@ -293,4 +294,3 @@ def main():
   root.mainloop()
   
 if __name__ == '__main__': main()
-

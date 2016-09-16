@@ -166,7 +166,7 @@ def theta( Gx, Gy ):
                 abs(radians - pi)
              ]
     mindiff = min(diffs)
-    ind = diffs.index(mindiff)
+    ind = diffs.index(mindiff) # Code on github. Respect honor code. Do not submit as your own. 
     if ind == 4: 
       ind = 0
     return ind 
@@ -255,7 +255,7 @@ def drawLine(image, m, b, intensity = 255, start = 0, stop = 512):
 def addLine(image, m, b, intensity = 1, start = 0, stop = 512):
   lastY = None
   for x in range(start, stop):
-    y = m * x + b
+    y = m * x + b # Code on github. Respect honor code. Do not submit as your own. 
     if y < WIDTH:
       ind = getIndex(int(y), x)
       if isValidPixel(ind):
@@ -287,7 +287,7 @@ def houghTransform(image):
   imageDiagonal = sqrt(HEIGHT**2 + WIDTH**2)
   radiusRange   = int(imageDiagonal + HEIGHT) + 1
   angleRange    = int( pi * ANGLEPRECISION )
-  
+  # Code on github. Respect honor code. Do not submit as your own. 
   accumulator = [0 for elt in range( angleRange * radiusRange )]
   
   for y in range(HEIGHT):
@@ -307,7 +307,7 @@ def normalize( image, intensity = 255 ):
   printElapsedTime( 'normalizing' )
   return [ int( x * intensity / m) for x in image ]
 
-def deHough(houghLst):
+def deHough(houghLst): # Code on github. Respect honor code. Do not submit as your own. 
   imageDiagonal = sqrt(HEIGHT**2 + WIDTH**2)
   radiusRange   = int(imageDiagonal + HEIGHT) + 1
   angleRange    = int( pi * ANGLEPRECISION )
@@ -329,12 +329,10 @@ def houghCircle( canny ):
   xyr = [-999] * 3
   linesheet = [0] * (WIDTH * HEIGHT)
       
-  
   #
   #-------abandoned :(
   #
-  
-  
+
   for elm in xyr:
     if elm < 0:
       print( "Circle detect: Element" )
@@ -360,6 +358,7 @@ from math import tan, atan, atan2, sin, cos, pi, sqrt
 
 
 def main():     
+  print("Coded by Ben Zhang, TJHSST class of 2015. Please respect the honor code.")
   image = [0] * (WIDTH * HEIGHT)
   addNoise(image, 50)
   
@@ -368,9 +367,9 @@ def main():
   drawCircle(image, 50, 300, 300)
   
   #-----------hough line
-  #accumulator = houghTransform(image)
-  #result = deHough(accumulator)
-  #drawLine(image, result[0], result[1], INTERMED)
+  accumulator = houghTransform(image)
+  result = deHough(accumulator)
+  drawLine(image, result[0], result[1], INTERMED)
   #-------------------
   
   
@@ -384,13 +383,10 @@ def main():
   cannied = cannyTransform(sobeled)
   print("ok!")
   sth = normalize( [x[4] for x in cannied] )
-  #displayImageWindow( sth )
+  displayImageWindow( sth )
   #--------------
   
-  
-  
-  
-  #displayImageWindow(image)
+  displayImageWindow(image)
   root.mainloop()
   
   
