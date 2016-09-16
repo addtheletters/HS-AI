@@ -12,7 +12,7 @@ Code is divided by the school year quarter in which it was written.
 
 ## Quarter 2 Highlights
 - Converting repeating decimals to fractions in recurringdecimal.py
-- AI that plays [Ghost](https://en.wikipedia.org/wiki/Ghost_(game\)) in ghost.py
+- AI that plays [Ghost](https://en.wikipedia.org/wiki/Ghost_(game)) in ghost.py
 - AI that plays [Othello / Reversi](https://en.wikipedia.org/wiki/Reversi) in revised_othello1.py. (Older versions also present.) Uses methods such as
     - N-ply [minimax](https://en.wikipedia.org/wiki/Minimax) decision making
     - [Alpha-beta](https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning) pruning
