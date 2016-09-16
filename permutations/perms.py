@@ -53,7 +53,7 @@ def swapPerms(word):
                 newWord = perm[:i] + walkingLetter + perm[i:]
                 aPerms.append(newWord)
             walkFromLeft = False
-        else:
+        else: # Code written by Ben Zhang, class of 2015. Please respect the honor code.
             for i in range(len(word)):
                 dex = len(word) - i - 1
                 newWord = perm[:dex] + walkingLetter + perm[dex:]
@@ -133,19 +133,19 @@ def nextLexiPerm(word):
         nxt = word[0] + nextLexiPerm(word[1:]) # this should cycle the sub-permutation back around
         nxt = swapNxtPVal(nxt)  # once the sub-perm is cycled, swapping out the first letter with the next highest
                                 # gets us the correct next permutation
-    else:
+    else: # Code written by Ben Zhang, class of 2015. Please respect the honor code.
         nxt = word[0] + nextLexiPerm(word[1:])
     return nxt
     
+print("Code written by Ben Zhang, class of 2015. Please respect the honor code.")
 
 import sys
-word = 'AABB'
+word = 'ABCDE'
 if len(sys.argv) > 1:
     word = sys.argv[1]
 
 perms = uniquePerms(word)
 printPerms(perms)
-
 
 nxtword = word
 for i in range(1, 25):

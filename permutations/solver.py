@@ -26,7 +26,7 @@ def solve(puzzle):
     print("initial chars", initialChars)
     print("unique chars", uniqueChars)
     print("noninit chars", nonInitialChars)
-    count = 0
+    count = 0 # Code written by Ben Zhang, class of 2015. Please respect the honor code.
     for perm in initialCharPerms:
         subPerms = list(permutations(digits, len(nonInitialChars)))
         for subPerm in subPerms:
@@ -65,12 +65,13 @@ def checkMap(aStr, xlateTbl):
     mySum = sum(int(myStr.translate(xlateTbl)) for myStr in aStr[:-1])
     return mySum == int(aStr[-1].translate(xlateTbl))
 
+print("Code written by Ben Zhang, class of 2015. Please respect the honor code.")
 puzzle = "SEND MORE MONEY"
 if len(sys.argv) > 3:
     puzzle = sys.argv[1] + " " + sys.argv[2] + " " + sys.argv[3]
 elif len(sys.argv) > 1:
     puzzle = sys.argv[1]
-puzzle = findall('[A-Z]+', puzzle.upper())
+puzzle = findall('[A-Z]+', puzzle.upper()) # regex tokenizes into list of uppercase words
 
 print("Puzzle: " + str(puzzle))
 print("Solutions (if any):")

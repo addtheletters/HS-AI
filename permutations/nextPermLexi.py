@@ -53,10 +53,10 @@ def swap(word, index1, index2):
 
 def nextLexiPerm(word):
     # returns permutation after word, in lexicographic order.
-    if len(word) < 2: return word
+    if len(word) < 2: return word 
     if normalizedPValue(word) == maxInversions(word[1:]):
         if nextPVal(word) >= len(word): # reached end of permutations, cycle around back to the first
-            return word[::-1]
+            return word[::-1] # Code written by Ben Zhang, class of 2015. Please respect the honor code.
         nxt = word[0] + nextLexiPerm(word[1:]) # this should cycle the sub-permutation back around
         nxt = swapNxtPVal(nxt)  # once the sub-perm is cycled, swapping out the first letter with the next highest
                                 # gets us the correct next permutation
@@ -65,7 +65,7 @@ def nextLexiPerm(word):
     return nxt
 
 import sys
-word = 'ABCDE'
+word = 'ABCD'
 limit = 25
 if len(sys.argv) > 1:
     word = sys.argv[1]
@@ -73,10 +73,10 @@ if len(sys.argv) > 2:
     limit = int(sys.argv[2])
     
 print(nextLexiPerm('BACD'))
-'''
+print("Code written by Ben Zhang, class of 2015. Please respect the honor code.")
+
 nxtword = word
 for i in range(1, limit):
     print(str(i) + "\tTH LEXI PERM IS: " + nxtword)
     nxtword = nextLexiPerm(nxtword)
-'''
 
