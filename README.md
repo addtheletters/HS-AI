@@ -1,7 +1,7 @@
 # HS-AI
-Code written for high school Artificial Intelligence, here for archival purposes.
+Code written for the TJHSST Artificial Intelligence class, here for archival purposes.
 
-Code is divided by the quarter of the school year in which it was written.
+Divided by the quarter of the school year in which it was written.
 
 ## 1: finding and searching
 - implementation of 3-element vectors in vector.py
